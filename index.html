@@ -83,7 +83,22 @@
   <main>
     <!-- ===================== HERO ===================== -->
     <section class="hero">
-      <div class="hero-media placeholder-img" data-label="Hero photo/video — Holi celebration (slideshow)">
+      <div class="hero-media" id="hero-slideshow">
+        <div class="hero-slide is-active" style="background-image:url('assets/hero-holi-crowd.jpg')">
+          <span class="hero-slide-credit">Photo: Ben P L / Wikimedia Commons (CC BY-SA 2.0)</span>
+        </div>
+        <div class="hero-slide" style="background-image:url('assets/hero-beach-dance.jpg')">
+          <span class="hero-slide-credit">Photo: Vyacheslav Argenberg / Wikimedia Commons (CC BY 4.0)</span>
+        </div>
+        <div class="hero-slide hero-slide-collage">
+          <div class="hero-collage">
+            <div style="background-image:url('assets/collage-garba-festival.jpg')"></div>
+            <div style="background-image:url('assets/collage-bharatanatyam.jpg')"></div>
+            <div style="background-image:url('assets/collage-holi-family.jpg')"></div>
+            <div style="background-image:url('assets/diwali-2027-featured.jpg')"></div>
+          </div>
+          <span class="hero-slide-credit">Photos: Wikimedia Commons contributors (CC BY-SA)</span>
+        </div>
         <div class="hero-overlay"></div>
       </div>
       <div class="container hero-content">
@@ -100,6 +115,11 @@
           <a href="#events" class="btn btn-primary btn-lg">Upcoming Events →</a>
           <a href="#community" class="btn btn-outline-light btn-lg">Join Our Community</a>
         </div>
+      </div>
+      <div class="hero-dots" role="tablist" aria-label="Slideshow navigation">
+        <button class="hero-dot is-active" type="button" data-slide="0" aria-label="Show slide 1"></button>
+        <button class="hero-dot" type="button" data-slide="1" aria-label="Show slide 2"></button>
+        <button class="hero-dot" type="button" data-slide="2" aria-label="Show slide 3"></button>
       </div>
       <button class="hero-pause" aria-label="Pause slideshow">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
@@ -271,6 +291,54 @@
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('bpc-theme', next);
     });
+
+    // Hero slideshow — auto-advances every 6s, pausable, with dot navigation
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroDots = document.querySelectorAll('.hero-dot');
+    const heroPauseBtn = document.querySelector('.hero-pause');
+    let heroIndex = 0;
+    let heroTimer = null;
+    let heroPaused = false;
+
+    function showHeroSlide(index) {
+      heroSlides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+      heroDots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+      heroIndex = index;
+    }
+
+    function nextHeroSlide() {
+      showHeroSlide((heroIndex + 1) % heroSlides.length);
+    }
+
+    function startHeroTimer() {
+      heroTimer = setInterval(nextHeroSlide, 6000);
+    }
+
+    if (heroSlides.length) {
+      startHeroTimer();
+
+      heroDots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          showHeroSlide(Number(dot.dataset.slide));
+          clearInterval(heroTimer);
+          if (!heroPaused) startHeroTimer();
+        });
+      });
+
+      heroPauseBtn.addEventListener('click', () => {
+        heroPaused = !heroPaused;
+        heroPauseBtn.classList.toggle('is-paused', heroPaused);
+        heroPauseBtn.setAttribute('aria-label', heroPaused ? 'Play slideshow' : 'Pause slideshow');
+        heroPauseBtn.innerHTML = heroPaused
+          ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7Z"/></svg>'
+          : '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+        if (heroPaused) {
+          clearInterval(heroTimer);
+        } else {
+          startHeroTimer();
+        }
+      });
+    }
   </script>
 </body>
 </html>

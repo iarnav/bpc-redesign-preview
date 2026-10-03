@@ -334,6 +334,64 @@ a { color: inherit; text-decoration: none; }
   cursor: pointer;
 }
 
+/* -------------------- Hero Slideshow -------------------- */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.hero-slide.is-active { opacity: 1; }
+.hero-slide-credit {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2;
+  font-size: 11px;
+  line-height: 1.3;
+  color: rgba(255,255,255,0.85);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.hero-slide-collage { background: none; }
+.hero-collage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+}
+.hero-collage div {
+  background-size: cover;
+  background-position: center;
+}
+.hero-dots {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+@media (min-width: 760px) {
+  .hero-dots { left: 24px; transform: none; }
+}
+.hero-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.25);
+  padding: 0;
+  cursor: pointer;
+}
+.hero-dot.is-active { background: #fff; }
+
 /* -------------------- Section titles -------------------- */
 .section-title {
   font-family: var(--font-display);
