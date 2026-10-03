@@ -900,3 +900,38 @@ a { color: inherit; text-decoration: none; }
   background: var(--ivory-soft);
 }
 .past-events p { color: var(--text-muted); margin: 0 0 24px; }
+
+/* Real photo in a homepage event card (instead of the placeholder block) */
+.event-card-media { position: relative; overflow: hidden; }
+.event-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.event-card-media .fe-media-credit { font-size: 10px; }
+
+/* Multi-day events: shrink the date so "16–18" fits the date block */
+.er-day-range { font-size: 22px; }
+
+/* Homepage card: category tag sits where the placeholder tag would */
+.event-card-body .event-cat { margin-bottom: 0; }
+.event-card-meta + .event-card-meta { margin-top: 2px; }
+
+/* Per-day times for multi-day events */
+.event-schedule {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.event-schedule li {
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: var(--ivory-soft);
+  color: var(--text-muted);
+}
+.event-schedule strong { color: var(--charcoal); margin-right: 4px; }
+.fe-meta svg { flex-shrink: 0; }
