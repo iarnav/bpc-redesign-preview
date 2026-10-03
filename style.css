@@ -935,3 +935,14 @@ a { color: inherit; text-decoration: none; }
 }
 .event-schedule strong { color: var(--charcoal); margin-right: 4px; }
 .fe-meta svg { flex-shrink: 0; }
+
+/* Four homepage event cards: 2×2 on tablets, one row on desktop */
+@media (min-width: 640px) {
+  .event-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) {
+  .event-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Keep the featured event clear of the sticky header when jumped to via #events */
+.featured-event { scroll-margin-top: 100px; }
