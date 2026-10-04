@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact Us — BPC Indian Community</title>
+<title>Gallery — BPC Indian Community</title>
 
 <!-- Google tag (gtag.js) — GA4 property: BPC Indian Community -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NKQS6ZV1"></script>
@@ -58,9 +58,9 @@
           <li><a href="about.html">About</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="index.html#community">Community</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="gallery.html" class="is-current" aria-current="page">Gallery</a></li>
           <li><a href="index.html#get-involved">Get Involved</a></li>
-          <li><a href="contact.html" class="is-current" aria-current="page">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -84,130 +84,50 @@
     <!-- ===================== PAGE HERO ===================== -->
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow eyebrow-light">Get In Touch</p>
-        <h1 class="page-hero-title">Contact Us</h1>
+        <p class="eyebrow eyebrow-light">Life at BPC</p>
+        <h1 class="page-hero-title">Gallery</h1>
         <p class="page-hero-subtitle">
-          Questions, ideas, or want to get involved? We'd love to hear from you.
+          Photos and highlights from our festivals, celebrations and community
+          gatherings. Pick an album to explore.
         </p>
       </div>
     </section>
 
-    <!-- ===================== CONTACT CONTENT ===================== -->
-    <section class="contact-section">
-      <div class="container contact-grid">
-
-        <!-- Contact form -->
-        <div class="contact-form-wrap">
-          <h2 class="section-title">Send us a message</h2>
-          <p class="contact-form-intro">
-            Fill out the form below and a member of our team will get back to
-            you as soon as possible.
-          </p>
-          <form class="contact-form" action="#" method="post">
-            <div class="form-row">
-              <div class="form-field">
-                <label for="name">Full name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
-              </div>
-              <div class="form-field">
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-field">
-                <label for="phone">Phone number <span class="optional">(optional)</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="07xxx xxxxxx">
-              </div>
-              <div class="form-field">
-                <label for="subject">Subject</label>
-                <select id="subject" name="subject">
-                  <option value="">Select a topic</option>
-                  <option value="events">Events &amp; Festivals</option>
-                  <option value="membership">Membership</option>
-                  <option value="volunteering">Volunteering</option>
-                  <option value="donations">Donations &amp; Sponsorship</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-field form-field-full">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg">Send Message →</button>
-          </form>
+    <!-- ===================== ALBUMS =====================
+         Albums are rendered from the ALBUMS list in the script below.
+         Current photos are SAMPLE stock images (Wikimedia Commons / Unsplash)
+         — replace with real BPC event photos (no identifiable faces).
+         On the WordPress site this should come from a gallery plugin /
+         media library folders rather than hand-written data. -->
+    <section class="gallery-section">
+      <div class="container">
+        <div id="album-index">
+          <ul class="album-grid" id="album-grid"></ul>
         </div>
 
-        <!-- Contact info -->
-        <aside class="contact-info">
-          <h2 class="section-title">Visit or reach us</h2>
-
-          <ul class="info-list">
-            <li>
-              <span class="info-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
-              </span>
-              <div>
-                <strong>Address</strong>
-                <p>Bournemouth, Poole &amp; Christchurch<br>Dorset, United Kingdom</p>
-              </div>
-            </li>
-            <li>
-              <span class="info-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2C10 22 2 14 2 7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-              </span>
-              <div>
-                <strong>Phone</strong>
-                <p><a href="tel:+441202000000">01202 000 000</a></p>
-              </div>
-            </li>
-            <li>
-              <span class="info-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="m4 6 8 7 8-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              <div>
-                <strong>Email</strong>
-                <p><a href="mailto:hello@bpcindiancommunity.co.uk">hello@bpcindiancommunity.co.uk</a></p>
-              </div>
-            </li>
-            <li>
-              <span class="info-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </span>
-              <div>
-                <strong>Office hours</strong>
-                <p>Mon–Fri, 9am–5pm<br>Weekends: event days only</p>
-              </div>
-            </li>
-          </ul>
-
-          <div class="info-social">
-            <strong>Follow us</strong>
-            <div class="footer-social contact-social">
-              <a href="#" aria-label="Instagram">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-              </a>
-              <a href="#" aria-label="Facebook">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H8v4h2v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2.5 2.5 0 0 1 5 0V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-              </a>
-              <a href="#" aria-label="YouTube">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="4" stroke="currentColor" stroke-width="2"/><path d="M11 10v4l3.5-2L11 10Z" fill="currentColor"/></svg>
-              </a>
-            </div>
+        <div id="album-view" hidden>
+          <a href="#" class="album-back">← All albums</a>
+          <div class="album-head">
+            <h2 class="section-title" id="album-title"></h2>
+            <p class="album-meta" id="album-meta"></p>
+            <p class="album-desc" id="album-desc"></p>
           </div>
-        </aside>
-      </div>
-
-      <!-- Map placeholder -->
-      <div class="container">
-        <div class="contact-map placeholder-img" data-label="Map — Bournemouth / Poole / Christchurch area"></div>
+          <ul class="photo-grid" id="photo-grid"></ul>
+        </div>
       </div>
     </section>
   </main>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lb-btn lb-close" id="lb-close" aria-label="Close">×</button>
+    <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous photo">‹</button>
+    <figure class="lb-figure">
+      <img id="lb-img" alt="">
+      <figcaption id="lb-caption"></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" id="lb-next" aria-label="Next photo">›</button>
+  </div>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer" id="get-involved">
@@ -290,6 +210,140 @@
       const next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('bpc-theme', next);
+    });
+
+    // Gallery albums ("folders"). To add photos, drop the full image in assets/
+    // and a ~640px copy in assets/thumbs/, then add an entry below.
+    const ALBUMS = [
+      {
+        id: 'diwali',
+        title: 'Diwali',
+        date: 'Festival of Lights',
+        desc: 'Diyas, lights and celebration as we mark Diwali together.',
+        photos: [
+          { file: 'diwali-2026-featured.jpg', alt: 'Rows of lit diya lamps', credit: 'Khokarahman / Wikimedia Commons (CC BY-SA 4.0)' },
+          { file: 'event-diwali.jpg', alt: 'Diwali lamps glowing at night', credit: 'Pinakpani / Wikimedia Commons (CC BY-SA 4.0)' }
+        ]
+      },
+      {
+        id: 'garba-dandiya',
+        title: 'Garba & Dandiya',
+        date: 'Navratri nights',
+        desc: 'Traditional Gujarati folk dance to celebrate Navratri.',
+        photos: [
+          { file: 'event-garba-dandiya.jpg', alt: 'Aerial view of a garba ground lit like a mandala', credit: 'Saurabh sirohiya / Wikimedia Commons (CC BY-SA 4.0)' },
+          { file: 'collage-garba-festival.jpg', alt: 'Garba festival ground at night', credit: 'Saurabh sirohiya / Wikimedia Commons (CC BY-SA 4.0)' }
+        ]
+      },
+      {
+        id: 'holi',
+        title: 'Holi',
+        date: 'Festival of Colours',
+        desc: 'Colour, music and dance at our biggest celebration of the year.',
+        photos: [
+          { file: 'hero-holi-colours.jpg', alt: 'Clouds of yellow, green and pink colour powder over a crowd', credit: 'Sachinghai09, edited by Radomianin / Wikimedia Commons (CC BY-SA 4.0)' }
+        ]
+      },
+      {
+        id: 'socials',
+        title: 'Summer Socials',
+        date: 'Out and about',
+        desc: 'Boat parties, beach days and summer get-togethers.',
+        photos: [
+          { file: 'hero-boat-party.jpg', alt: 'Aerial view of a party catamaran at golden hour', credit: 'Omar Eagle / Unsplash' }
+        ]
+      }
+    ];
+
+    const albumIndex = document.getElementById('album-index');
+    const albumView = document.getElementById('album-view');
+    const photoGrid = document.getElementById('photo-grid');
+    const countLabel = n => n + (n === 1 ? ' photo' : ' photos');
+
+    document.getElementById('album-grid').innerHTML = ALBUMS.map(a => {
+      // Two layers behind the cover; blank cards stand in when an album has fewer photos
+      const layers = [2, 1].map(n => a.photos[n]
+        ? `<img class="album-layer album-layer-${n}" src="assets/thumbs/${a.photos[n].file}" alt="" loading="lazy">`
+        : `<span class="album-layer album-layer-${n} album-layer-blank"></span>`).join('');
+      return `<li>
+        <a class="album-card" href="#${a.id}">
+          <span class="album-stack">
+            ${layers}
+            <img class="album-cover" src="assets/thumbs/${a.photos[0].file}" alt="" loading="lazy">
+            <span class="album-count">${countLabel(a.photos.length)}</span>
+          </span>
+          <span class="album-info">
+            <span class="album-name">${a.title}</span>
+            <span class="album-sub">${a.date}</span>
+          </span>
+        </a>
+      </li>`;
+    }).join('');
+
+    let current = null;
+
+    function render(scroll) {
+      const id = decodeURIComponent(location.hash.slice(1));
+      current = ALBUMS.find(a => a.id === id) || null;
+      albumIndex.hidden = !!current;
+      albumView.hidden = !current;
+      if (!current) return;
+      document.getElementById('album-title').textContent = current.title;
+      document.getElementById('album-meta').textContent = current.date + ' · ' + countLabel(current.photos.length);
+      document.getElementById('album-desc').textContent = current.desc;
+      photoGrid.innerHTML = current.photos.map((p, i) => `<li>
+        <button class="photo-tile" data-index="${i}" aria-label="View photo: ${p.alt}">
+          <img src="assets/thumbs/${p.file}" alt="${p.alt}" loading="lazy">
+        </button>
+      </li>`).join('');
+      if (scroll) albumView.scrollIntoView({ block: 'start' });
+    }
+    window.addEventListener('hashchange', () => render(true));
+    document.querySelector('.album-back').addEventListener('click', e => {
+      e.preventDefault();
+      history.pushState('', '', location.pathname);
+      render();
+    });
+    render();
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbCaption = document.getElementById('lb-caption');
+    let lbIndex = 0;
+
+    function showPhoto(i) {
+      const photos = current.photos;
+      lbIndex = (i + photos.length) % photos.length;
+      const p = photos[lbIndex];
+      lbImg.src = 'assets/' + p.file;
+      lbImg.alt = p.alt;
+      lbCaption.textContent = `${lbIndex + 1} / ${photos.length} · Photo: ${p.credit}`;
+      const multi = photos.length > 1;
+      document.getElementById('lb-prev').hidden = !multi;
+      document.getElementById('lb-next').hidden = !multi;
+    }
+    function closeLightbox() {
+      lightbox.hidden = true;
+      document.body.style.overflow = '';
+    }
+    photoGrid.addEventListener('click', e => {
+      const tile = e.target.closest('.photo-tile');
+      if (!tile) return;
+      showPhoto(Number(tile.dataset.index));
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+      document.getElementById('lb-close').focus();
+    });
+    document.getElementById('lb-close').addEventListener('click', closeLightbox);
+    document.getElementById('lb-prev').addEventListener('click', () => showPhoto(lbIndex - 1));
+    document.getElementById('lb-next').addEventListener('click', () => showPhoto(lbIndex + 1));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft' && current.photos.length > 1) showPhoto(lbIndex - 1);
+      if (e.key === 'ArrowRight' && current.photos.length > 1) showPhoto(lbIndex + 1);
     });
   </script>
 </body>
