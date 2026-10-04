@@ -1190,11 +1190,11 @@ a { color: inherit; text-decoration: none; }
 .team-more[open] summary::after { content: " –"; }
 .team-more p { color: var(--text-muted); margin: 10px 0 0; }
 
-.about-cta { padding: 40px 0; }
+.about-cta { padding: 40px 0 88px; }
 .about-cta-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 
 /* Proud Sponsors: logos sit on white tiles in both themes */
-.sponsors-section { padding: 40px 0 88px; }
+.sponsors-section { padding: 0 0 88px; }
 .sponsors-section .section-title.center { margin-bottom: 32px; }
 .sponsor-grid {
   list-style: none;
