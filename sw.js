@@ -1,9 +1,9 @@
 // BPC service worker — makes the site installable and keeps visited pages available offline.
 // Bump CACHE_VERSION whenever the core files below change so phones pick up the new version.
-const CACHE_VERSION = 'bpc-v6';
+const CACHE_VERSION = 'bpc-v7';
 const CORE = [
   './', 'index.html', 'events.html', 'gallery.html', 'about.html', 'contact.html', 'donate.html', 'privacy.html',
-  'style.css', 'manifest.webmanifest', 'assets/icons/icon-192.png'
+  'style.css', 'assets/site.js', 'assets/search-index.json', 'manifest.webmanifest', 'assets/icons/icon-192.png'
 ];
 
 self.addEventListener('install', (event) => {

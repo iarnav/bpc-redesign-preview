@@ -1,0 +1,35 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BPC Indian Community//Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:garba-2026-fri@bpcindiancommunity.co.uk
+DTSTAMP:20261005T120000Z
+DTSTART:20261016T180000Z
+DTEND:20261016T220000Z
+SUMMARY:Garba & Dandiya Night (BPC)
+LOCATION:Carrington House Hotel\, Ambassador Suite\, Knyveton Road\, Bournemouth BH1 3QQ
+DESCRIPTION:Traditional Gujarati folk dance to celebrate Navratri. All ages and abilities welcome.
+URL:https://iarnav.github.io/bpc-redesign-preview/events.html#garba-dandiya
+END:VEVENT
+BEGIN:VEVENT
+UID:garba-2026-sat@bpcindiancommunity.co.uk
+DTSTAMP:20261005T120000Z
+DTSTART:20261017T180000Z
+DTEND:20261017T220000Z
+SUMMARY:Garba & Dandiya Night (BPC)
+LOCATION:Carrington House Hotel\, Ambassador Suite\, Knyveton Road\, Bournemouth BH1 3QQ
+DESCRIPTION:Traditional Gujarati folk dance to celebrate Navratri. All ages and abilities welcome.
+URL:https://iarnav.github.io/bpc-redesign-preview/events.html#garba-dandiya
+END:VEVENT
+BEGIN:VEVENT
+UID:garba-2026-sun@bpcindiancommunity.co.uk
+DTSTAMP:20261005T120000Z
+DTSTART:20261018T140000Z
+DTEND:20261018T180000Z
+SUMMARY:Garba & Dandiya (BPC)
+LOCATION:Carrington House Hotel\, Ambassador Suite\, Knyveton Road\, Bournemouth BH1 3QQ
+DESCRIPTION:Traditional Gujarati folk dance to celebrate Navratri. All ages and abilities welcome.
+URL:https://iarnav.github.io/bpc-redesign-preview/events.html#garba-dandiya
+END:VEVENT
+END:VCALENDAR

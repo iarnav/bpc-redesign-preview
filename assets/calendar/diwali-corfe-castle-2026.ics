@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BPC Indian Community//Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:diwali-corfe-2026@bpcindiancommunity.co.uk
+DTSTAMP:20261005T120000Z
+DTSTART:20261025T160000Z
+DTEND:20261025T210000Z
+SUMMARY:Diwali at Corfe Castle (BPC × National Trust)
+LOCATION:Corfe Castle\, Dorset
+DESCRIPTION:A celebration of light\, culture and community: light trail\, Indian food stalls\, live singing\, dance and family activities.
+URL:https://www.nationaltrust.org.uk/visit/dorset/corfe-castle/events/76128437-4f75-4108-96ad-10a2fd708918
+END:VEVENT
+END:VCALENDAR
