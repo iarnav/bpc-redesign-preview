@@ -1,0 +1,53 @@
+// BPC service worker — makes the site installable and keeps visited pages available offline.
+// Bump CACHE_VERSION whenever the core files below change so phones pick up the new version.
+const CACHE_VERSION = 'bpc-v1';
+const CORE = [
+  './', 'index.html', 'events.html', 'gallery.html', 'about.html', 'contact.html',
+  'style.css', 'manifest.webmanifest', 'assets/icons/icon-192.png'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(caches.open(CACHE_VERSION).then((cache) => cache.addAll(CORE)));
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) =>
+      Promise.all(keys.filter((k) => k !== CACHE_VERSION).map((k) => caches.delete(k))))
+  );
+  self.clients.claim();
+});
+
+self.addEventListener('fetch', (event) => {
+  const req = event.request;
+  if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
+
+  // Pages: network first so content stays fresh, fall back to cache when offline.
+  if (req.mode === 'navigate') {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          const copy = res.clone();
+          caches.open(CACHE_VERSION).then((cache) => cache.put(req, copy));
+          return res;
+        })
+        .catch(() => caches.match(req).then((hit) => hit || caches.match('index.html')))
+    );
+    return;
+  }
+
+  // CSS, images, icons: serve from cache, refresh in the background.
+  event.respondWith(
+    caches.match(req).then((hit) => {
+      const network = fetch(req).then((res) => {
+        if (res.ok) {
+          const copy = res.clone();
+          caches.open(CACHE_VERSION).then((cache) => cache.put(req, copy));
+        }
+        return res;
+      });
+      return hit || network;
+    })
+  );
+});
