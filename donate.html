@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support BPC — BPC Indian Community</title>
+
+<!-- Google tag (gtag.js) — GA4 property: BPC Indian Community -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NKQS6ZV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W0NKQS6ZV1');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#141A4A">
+<link rel="icon" type="image/svg+xml" href="assets/bpc-logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BPC">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    const stored = localStorage.getItem('bpc-theme');
+    const theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"><img class="logo-emblem" src="assets/bpc-logo.svg" width="48" height="48" alt=""></span>
+        <span class="logo-text">
+          <strong>BPC</strong> <span class="logo-sub1">INDIAN<br>COMMUNITY</span>
+        </span>
+        <span class="logo-tagline">Bournemouth • Poole • Christchurch</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary" id="main-nav">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="index.html#community">Community</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="donate.html" class="is-current" aria-current="page">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+        <a href="donate.html#donate" class="btn btn-primary">Donate</a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow eyebrow-light">Get involved</p>
+        <h1 class="page-hero-title">Support BPC</h1>
+        <p class="page-hero-subtitle">
+          Every gift helps us keep festivals, wellbeing programmes and community
+          support going across Bournemouth, Poole and Christchurch.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== DONATE =====================
+         Bank details and allocation from the live site's donate page. -->
+    <section class="donate-section" id="donate">
+      <div class="container donate-grid">
+        <div class="bank-card">
+          <p class="eyebrow">Donate by bank transfer</p>
+          <h2 class="section-title">One-off or monthly</h2>
+          <p class="donate-intro">Send a one-off gift, or set up a monthly standing order with your bank using the same details.</p>
+          <dl class="bank-details">
+              <div class="bank-row">
+                <dt>Account name</dt>
+                <dd><span class="bank-value">Music Lovers Bollywood Club</span>
+                  <button type="button" class="copy-btn" data-copy="Music Lovers Bollywood Club" aria-label="Copy account name"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10" stroke="currentColor" stroke-width="2"/></svg><span>Copy</span></button></dd>
+              </div>
+              <div class="bank-row">
+                <dt>Sort code</dt>
+                <dd><span class="bank-value">30-90-89</span>
+                  <button type="button" class="copy-btn" data-copy="309089" aria-label="Copy sort code"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10" stroke="currentColor" stroke-width="2"/></svg><span>Copy</span></button></dd>
+              </div>
+              <div class="bank-row">
+                <dt>Account number</dt>
+                <dd><span class="bank-value">44254168</span>
+                  <button type="button" class="copy-btn" data-copy="44254168" aria-label="Copy account number"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10" stroke="currentColor" stroke-width="2"/></svg><span>Copy</span></button></dd>
+              </div>
+          </dl>
+          <p class="copy-status" role="status" aria-live="polite"></p>
+          <p class="donate-note">Questions about giving? Email <a href="mailto:contact@bpcindiancommunity.co.uk">contact@bpcindiancommunity.co.uk</a>.</p>
+        </div>
+
+        <figure class="alloc-card">
+          <p class="eyebrow">Where your money goes</p>
+          <h2 class="section-title">Typical split of donations</h2>
+          <ol class="alloc-list">
+              <li class="alloc-row" tabindex="0" title="Event delivery & operations: 60–65% of donations">
+                <span class="alloc-label">Event delivery &amp; operations</span>
+                <span class="alloc-track" aria-hidden="true"><span class="alloc-min" style="width:85.7%"></span><span class="alloc-range" style="width:7.1%"></span></span>
+                <span class="alloc-value">60–65%</span>
+              </li>
+              <li class="alloc-row" tabindex="0" title="Community development & outreach: 10–15% of donations">
+                <span class="alloc-label">Community development &amp; outreach</span>
+                <span class="alloc-track" aria-hidden="true"><span class="alloc-min" style="width:14.3%"></span><span class="alloc-range" style="width:7.1%"></span></span>
+                <span class="alloc-value">10–15%</span>
+              </li>
+              <li class="alloc-row" tabindex="0" title="Volunteer support: 8–10% of donations">
+                <span class="alloc-label">Volunteer support</span>
+                <span class="alloc-track" aria-hidden="true"><span class="alloc-min" style="width:11.4%"></span><span class="alloc-range" style="width:2.9%"></span></span>
+                <span class="alloc-value">8–10%</span>
+              </li>
+              <li class="alloc-row" tabindex="0" title="Technology, licences & admin: 8–12% of donations (about £2,000–£3,000 a year)">
+                <span class="alloc-label">Technology, licences &amp; admin<small>about £2,000–£3,000 a year</small></span>
+                <span class="alloc-track" aria-hidden="true"><span class="alloc-min" style="width:11.4%"></span><span class="alloc-range" style="width:5.7%"></span></span>
+                <span class="alloc-value">8–12%</span>
+              </li>
+              <li class="alloc-row" tabindex="0" title="Equipment: 3–5% of donations">
+                <span class="alloc-label">Equipment</span>
+                <span class="alloc-track" aria-hidden="true"><span class="alloc-min" style="width:4.3%"></span><span class="alloc-range" style="width:2.9%"></span></span>
+                <span class="alloc-value">3–5%</span>
+              </li>
+              <li class="alloc-row" tabindex="0" title="Contingency reserve: 2–3% of donations">
+                <span class="alloc-label">Contingency reserve</span>
+                <span class="alloc-track" aria-hidden="true"><span class="alloc-min" style="width:2.9%"></span><span class="alloc-range" style="width:1.4%"></span></span>
+                <span class="alloc-value">2–3%</span>
+              </li>
+          </ol>
+          <figcaption class="alloc-caption"><span class="alloc-key alloc-key-min"></span> Lower estimate <span class="alloc-key alloc-key-range"></span> Upper estimate · Typical ranges, as published by BPC.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== OTHER WAYS TO HELP ===================== -->
+    <section class="ways-section" id="get-involved">
+      <div class="container">
+        <p class="eyebrow center">More ways to help</p>
+        <h2 class="section-title center">Get involved</h2>
+        <ul class="values-grid ways-grid">
+          <li class="value-card"><span class="wwd-icon" aria-hidden="true">🙋</span><h3>Volunteer</h3><p>Help run our festivals and events, from set-up to welcoming guests.</p><a class="ways-link" href="contact.html">Get in touch →</a></li>
+          <li class="value-card"><span class="wwd-icon" aria-hidden="true">🤝</span><h3>Sponsor an event</h3><p>Partner with us and reach families across Bournemouth, Poole and Christchurch.</p><a class="ways-link" href="contact.html">Talk to us →</a></li>
+          <li class="value-card"><span class="wwd-icon" aria-hidden="true">💬</span><h3>Join the community</h3><p>Our Facebook group is the best place for news, photos and event updates.</p><a class="ways-link" href="https://www.facebook.com/share/g/15fT9cQumg/" target="_blank" rel="noopener">Join on Facebook →</a></li>
+          <li class="value-card"><span class="wwd-icon" aria-hidden="true">🎉</span><h3>Come along</h3><p>The easiest way to support us is to come to an event and bring your friends.</p><a class="ways-link" href="events.html">See events →</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-footer">
+          <span class="logo-mark"><img class="logo-emblem" src="assets/bpc-logo.svg" width="48" height="48" alt=""></span>
+          <span class="logo-text">
+            <strong>BPC</strong> <span class="logo-sub1">INDIAN<br>COMMUNITY</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Celebrating culture. Building community.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="index.html#community">Community</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="donate.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/bpcmlbindian/" target="_blank" rel="noopener" aria-label="BPC on Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/share/g/15fT9cQumg/" target="_blank" rel="noopener" aria-label="BPC Facebook group">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H8v4h2v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 BPC Indian Community. All rights reserved. · <a href="privacy.html">Privacy policy</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.classList.toggle('is-active', isOpen);
+    });
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.classList.remove('is-active');
+      });
+    });
+
+    // Light/dark theme toggle — persisted in localStorage, applied to <html data-theme="...">
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('bpc-theme', next);
+    });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+    }
+  </script>
+  <script>
+    // Copy bank details to the clipboard
+    const copyStatus = document.querySelector('.copy-status');
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(btn.dataset.copy);
+          btn.classList.add('is-copied');
+          btn.querySelector('span').textContent = 'Copied';
+          copyStatus.textContent = 'Copied to clipboard.';
+          setTimeout(() => { btn.classList.remove('is-copied'); btn.querySelector('span').textContent = 'Copy'; }, 2000);
+        } catch (e) {
+          copyStatus.textContent = 'Copy not available here; please copy the details manually.';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
