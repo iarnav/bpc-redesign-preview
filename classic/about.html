@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — BPC Indian Community</title>
+
+<!-- Google tag (gtag.js) — GA4 property: BPC Indian Community -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NKQS6ZV1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W0NKQS6ZV1');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#1E2238">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="BPC">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    const stored = localStorage.getItem('bpc-theme');
+    const theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2C18 2 10 9 10 17c0 4.4 3.6 8 8 8s8-3.6 8-8C26 9 18 2 18 2Z" fill="url(#g1)"/>
+            <path d="M8 18c0 0-6 3-6 9 0 3.3 2.7 6 6 6s6-2.7 6-6c0-6-6-9-6-9Z" fill="url(#g2)"/>
+            <path d="M28 18c0 0 6 3 6 9 0 3.3-2.7 6-6 6s-6-2.7-6-6c0-6 6-9 6-9Z" fill="url(#g2)"/>
+            <defs>
+              <linearGradient id="g1" x1="10" y1="2" x2="26" y2="25" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF7A1A"/><stop offset="1" stop-color="#E8347F"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="2" y1="18" x2="34" y2="33" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF7A1A"/><stop offset="1" stop-color="#E8347F"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <strong>BPC</strong> <span class="logo-sub1">INDIAN<br>COMMUNITY</span>
+        </span>
+        <span class="logo-tagline">Bournemouth • Poole • Christchurch</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary" id="main-nav">
+        <ul>
+          <li><a href="about.html" class="is-current" aria-current="page">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="index.html#community">Community</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html#get-involved">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+        <a href="#donate" class="btn btn-primary">Donate</a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow eyebrow-light">About BPC</p>
+        <h1 class="page-hero-title">Unity in Diversity</h1>
+        <p class="page-hero-subtitle">
+          A community of Indians in Dorset celebrating culture, organising
+          events and supporting each other.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== WHO WE ARE =====================
+         Copy adapted from the current live site (bpcindiancommunity.co.uk). -->
+    <section class="about-intro">
+      <div class="container about-intro-grid">
+        <div>
+          <p class="eyebrow">Who we are</p>
+          <h2 class="section-title">The heart of our Indian community</h2>
+        </div>
+        <div class="about-intro-text">
+          <p class="about-lead">
+            BPC is more than just a group — it's a family brought together by
+            shared traditions, vibrant celebrations and a spirit of togetherness.
+          </p>
+          <p>
+            From cultural festivals and wellness programmes to charity drives and
+            social events, we create moments that connect hearts and celebrate our
+            rich heritage. We welcome the Indian community and friends of every
+            background across Bournemouth, Poole and Christchurch — preserving
+            traditions, embracing diversity and building a stronger community for
+            everyone.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OUR STORY ===================== -->
+    <section class="about-story">
+      <div class="container">
+        <div class="about-story-inner">
+        <p class="eyebrow">Our story</p>
+        <h2 class="section-title">From a radio show to a community</h2>
+        <p>
+          BPC began with music. What started as <em>Music Lovers of Bollywood</em>
+          — a small group and a weekly Bollywood music broadcast on local radio —
+          grew into a thriving network of professionals, families and friends.
+          Today the BPC Indian Community offers social, cultural and educational
+          activities all year round, from Holi and Diwali to dance, wellbeing,
+          networking and charity events.
+        </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHAT WE STAND FOR ===================== -->
+    <section class="about-values">
+      <div class="container">
+        <h2 class="section-title center">What we stand for</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <span class="wwd-icon" aria-hidden="true">🪔</span>
+            <h3>Celebrating culture</h3>
+            <p>Festivals, music, dance and food that keep our traditions alive and share them with everyone.</p>
+          </div>
+          <div class="value-card">
+            <span class="wwd-icon" aria-hidden="true">🤝</span>
+            <h3>Bringing people together</h3>
+            <p>Events and networking that turn newcomers into friends and neighbours into family.</p>
+          </div>
+          <div class="value-card">
+            <span class="wwd-icon" aria-hidden="true">🌍</span>
+            <h3>Everyone is welcome</h3>
+            <p>Proudly British Indian and open to all — whatever your background, age or ability.</p>
+          </div>
+          <div class="value-card">
+            <span class="wwd-icon" aria-hidden="true">❤️</span>
+            <h3>Giving back</h3>
+            <p>Working with local charities on mental health, domestic violence awareness, inclusion and refugee integration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OUR TEAM =====================
+         Photos and bios from the current live site. -->
+    <section class="team-section" id="team">
+      <div class="container">
+        <p class="eyebrow center">The people behind BPC</p>
+        <h2 class="section-title center">Our Team</h2>
+        <ul class="team-grid">
+          <li class="team-card">
+            <img class="team-photo" src="assets/team/poonam-paranjpe.jpg" alt="Poonam Paranjpe" loading="lazy">
+            <h3 class="team-name">Poonam Paranjpe</h3>
+            <p class="team-role">Founding Member</p>
+            <p class="team-tags">Education · Wellbeing · Community</p>
+            <p class="team-bio">Special Educational Needs Practitioner, educator and community connector, with 15 years in community development.</p>
+            <details class="team-more">
+              <summary>Read full bio</summary>
+              <p>Poonam moved to the UK from India 21 years ago to pursue her second master's degree, and has an academic background in Clinical Psychology, Public Health and Health Promotion. She believes education is the cornerstone of personal growth.</p>
+              <p>Outside work and community life, she loves cooking and dancing.</p>
+            </details>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="assets/team/anjali-mavi.jpg" alt="Anjali Mavi" loading="lazy">
+            <h3 class="team-name">Anjali Mavi</h3>
+            <p class="team-role">Co-Founder</p>
+            <p class="team-tags">Community · Culture · Women</p>
+            <p class="team-bio">Community leader, radio presenter and creative facilitator. Anjali leads a 40-strong women's Indian dance group performing across Dorset and Hampshire.</p>
+            <details class="team-more">
+              <summary>Read full bio</summary>
+              <p>Anjali came to England from India 18 years ago and holds an MBA in Marketing and Human Resources. With a background in administration, recruitment and welfare, she has worked extensively with diverse communities, women's groups and international professionals, helping them access opportunities and build confidence.</p>
+              <p>She works closely with charities across Dorset and Hampshire on domestic violence awareness, mental health, cultural inclusion and refugee integration.</p>
+            </details>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="assets/team/ramesh-lal.jpg" alt="Ramesh Lal" loading="lazy">
+            <h3 class="team-name">Ramesh Lal</h3>
+            <p class="team-role">Co-Founder</p>
+            <p class="team-tags">Community · Music · Culture</p>
+            <p class="team-bio">Optometrist and proud British Indian who helped grow a weekly Bollywood radio broadcast into BPC.</p>
+            <details class="team-more">
+              <summary>Read full bio</summary>
+              <p>Born to Indian parents in Kenya, Ramesh moved to the UK aged 11 and grew up in the Midlands. He studied optometry in Glasgow before settling in Bournemouth.</p>
+              <p>Until recently he ran a social enterprise in Kinson, Bournemouth, dedicated to community support.</p>
+            </details>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="assets/team/abhishek-jhawar.jpg" alt="Abhishek Jhawar" loading="lazy">
+            <h3 class="team-name">Abhishek Jhawar</h3>
+            <p class="team-role">Co-Founder</p>
+            <p class="team-tags">Events · Networking · Music</p>
+            <p class="team-bio">Abhi drives BPC's cultural events and networking programmes, bringing business and technology leadership to the community.</p>
+            <details class="team-more">
+              <summary>Read full bio</summary>
+              <p>Abhi combines professional expertise in business leadership and technology with a passion for community building.</p>
+              <p>He's also DJ Abhi UK, creating music experiences that celebrate Indian culture and connect people through rhythm.</p>
+            </details>
+          </li>
+          <li class="team-card">
+            <img class="team-photo team-photo-top" src="assets/team/jitender-mavi.jpg" alt="Jitender Mavi" loading="lazy">
+            <h3 class="team-name">Jitender Mavi</h3>
+            <p class="team-role">Founder, Music Lovers of Bollywood</p>
+            <p class="team-tags">Technology · Events · Community</p>
+            <p class="team-bio">Known as DJ Mav, Jitender started the group that became BPC — and is our go-to tech expert and problem solver.</p>
+            <details class="team-more">
+              <summary>Read full bio</summary>
+              <p>Professionally, Jitender is a Senior Director in Investment Banking at HSBC, bringing deep finance and technology know-how to the community.</p>
+              <p>He's an amazing Bhangra dancer, a passionate biker and a cricket enthusiast — always ready to support the team at community events, especially our charity cricket matches.</p>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="about-cta">
+      <div class="container">
+        <div class="past-events">
+          <h2 class="section-title">Be part of our community</h2>
+          <p>Come along to an event, volunteer with us, or just say hello.</p>
+          <div class="about-cta-actions">
+            <a href="events.html" class="btn btn-primary">Upcoming Events →</a>
+            <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" id="get-involved">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-footer">
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2C18 2 10 9 10 17c0 4.4 3.6 8 8 8s8-3.6 8-8C26 9 18 2 18 2Z" fill="url(#g3)"/>
+              <path d="M8 18c0 0-6 3-6 9 0 3.3 2.7 6 6 6s6-2.7 6-6c0-6-6-9-6-9Z" fill="url(#g4)"/>
+              <path d="M28 18c0 0 6 3 6 9 0 3.3-2.7 6-6 6s-6-2.7-6-6c0-6 6-9 6-9Z" fill="url(#g4)"/>
+              <defs>
+                <linearGradient id="g3" x1="10" y1="2" x2="26" y2="25" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF7A1A"/><stop offset="1" stop-color="#E8347F"/>
+                </linearGradient>
+                <linearGradient id="g4" x1="2" y1="18" x2="34" y2="33" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF7A1A"/><stop offset="1" stop-color="#E8347F"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="logo-text">
+            <strong>BPC</strong> <span class="logo-sub1">INDIAN<br>COMMUNITY</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Celebrating culture. Building community.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="index.html#community">Community</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html#get-involved">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H8v4h2v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2.5 2.5 0 0 1 5 0V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="4" stroke="currentColor" stroke-width="2"/><path d="M11 10v4l3.5-2L11 10Z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 BPC Indian Community. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.classList.toggle('is-active', isOpen);
+    });
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.classList.remove('is-active');
+      });
+    });
+
+    // Light/dark theme toggle — persisted in localStorage, applied to <html data-theme="...">
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('bpc-theme', next);
+    });
+  </script>
+</body>
+</html>
