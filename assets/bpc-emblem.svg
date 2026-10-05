@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="BPC Indian Community emblem">
+  <defs>
+    <clipPath id="bpc-c"><circle cx="50" cy="50" r="49"/></clipPath>
+    <linearGradient id="bpc-s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB25E"/><stop offset="1" stop-color="#F07A12"/></linearGradient>
+    <linearGradient id="bpc-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A9D3A"/><stop offset="1" stop-color="#0D6E0A"/></linearGradient>
+  </defs>
+  <g clip-path="url(#bpc-c)">
+    <rect width="100" height="100" fill="#FFFFFF"/>
+    <path fill="url(#bpc-s)" d="M0 0H100V27C84 34 70 23 52 28S20 36 0 28Z"/>
+    <path fill="url(#bpc-g)" d="M0 72C18 65 34 76 52 72S84 65 100 72V100H0Z"/>
+  </g>
+  <g fill="#14207A">
+    <circle cx="50" cy="50" r="19" fill="none" stroke="#14207A" stroke-width="2.2"/>
+    <path d="M53.00 50.00L59.98 50.70L67.50 50.00L59.98 49.30Z M52.90 50.78L59.45 53.26L66.90 54.53L59.82 51.91Z M52.60 51.50L58.29 55.59L65.16 58.75L58.99 54.38Z M52.12 52.12L56.56 57.55L62.37 62.37L57.55 56.56Z M51.50 52.60L54.38 58.99L58.75 65.16L55.59 58.29Z M50.78 52.90L51.91 59.82L54.53 66.90L53.26 59.45Z M50.00 53.00L49.30 59.98L50.00 67.50L50.70 59.98Z M49.22 52.90L46.74 59.45L45.47 66.90L48.09 59.82Z M48.50 52.60L44.41 58.29L41.25 65.16L45.62 58.99Z M47.88 52.12L42.45 56.56L37.63 62.37L43.44 57.55Z M47.40 51.50L41.01 54.38L34.84 58.75L41.71 55.59Z M47.10 50.78L40.18 51.91L33.10 54.53L40.55 53.26Z M47.00 50.00L40.02 49.30L32.50 50.00L40.02 50.70Z M47.10 49.22L40.55 46.74L33.10 45.47L40.18 48.09Z M47.40 48.50L41.71 44.41L34.84 41.25L41.01 45.62Z M47.88 47.88L43.44 42.45L37.63 37.63L42.45 43.44Z M48.50 47.40L45.62 41.01L41.25 34.84L44.41 41.71Z M49.22 47.10L48.09 40.18L45.47 33.10L46.74 40.55Z M50.00 47.00L50.70 40.02L50.00 32.50L49.30 40.02Z M50.78 47.10L53.26 40.55L54.53 33.10L51.91 40.18Z M51.50 47.40L55.59 41.71L58.75 34.84L54.38 41.01Z M52.12 47.88L57.55 43.44L62.37 37.63L56.56 42.45Z M52.60 48.50L58.99 45.62L65.16 41.25L58.29 44.41Z M52.90 49.22L59.82 48.09L66.90 45.47L59.45 46.74Z"/>
+    <circle cx="67.55" cy="52.31" r=".8"/><circle cx="66.35" cy="56.77" r=".8"/><circle cx="64.04" cy="60.78" r=".8"/><circle cx="60.78" cy="64.04" r=".8"/><circle cx="56.77" cy="66.35" r=".8"/><circle cx="52.31" cy="67.55" r=".8"/><circle cx="47.69" cy="67.55" r=".8"/><circle cx="43.23" cy="66.35" r=".8"/><circle cx="39.22" cy="64.04" r=".8"/><circle cx="35.96" cy="60.78" r=".8"/><circle cx="33.65" cy="56.77" r=".8"/><circle cx="32.45" cy="52.31" r=".8"/><circle cx="32.45" cy="47.69" r=".8"/><circle cx="33.65" cy="43.23" r=".8"/><circle cx="35.96" cy="39.22" r=".8"/><circle cx="39.22" cy="35.96" r=".8"/><circle cx="43.23" cy="33.65" r=".8"/><circle cx="47.69" cy="32.45" r=".8"/><circle cx="52.31" cy="32.45" r=".8"/><circle cx="56.77" cy="33.65" r=".8"/><circle cx="60.78" cy="35.96" r=".8"/><circle cx="64.04" cy="39.22" r=".8"/><circle cx="66.35" cy="43.23" r=".8"/><circle cx="67.55" cy="47.69" r=".8"/>
+    <circle cx="50" cy="50" r="3.2"/>
+  </g>
+  <circle cx="50" cy="50" r="48.6" fill="none" stroke="#14207A" stroke-opacity=".2" stroke-width=".8"/>
+</svg>

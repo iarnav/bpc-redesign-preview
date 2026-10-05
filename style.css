@@ -4,13 +4,17 @@
    ========================================================= */
 
 :root {
-  --ivory: #FBF6EF;
-  --ivory-soft: #F6EFE4;
-  --charcoal: #241F1A;
-  --navy: #1E2238;
-  --orange: #FF7A1A;
-  --magenta: #E8347F;
-  --gradient-accent: linear-gradient(90deg, var(--orange), var(--magenta));
+  --ivory: #FBF7F0;
+  --ivory-soft: #F4EEE2;
+  --charcoal: #22201C;
+  --navy: #141A4A;              /* deep Ashoka-chakra navy */
+  --saffron: #FF9933;           /* flag saffron — decorative / on dark backgrounds */
+  --green: #138808;             /* flag India green */
+  --accent: #0F7A0B;            /* text-safe green for links, eyebrows, highlights */
+  --accent-rgb: 15, 122, 11;
+  --gradient-accent: linear-gradient(90deg, #EC7811, #CF5A08);   /* saffron buttons (white text) */
+  --saffron-shadow-rgb: 214, 98, 10;
+  --tricolour: linear-gradient(90deg, var(--saffron) 0 33.34%, #FFFFFF 33.34% 66.67%, var(--green) 66.67% 100%);
   --text-muted: #6B6459;
   --radius-pill: 999px;
   --radius-card: 20px;
@@ -20,19 +24,21 @@
 
   /* Theme-aware surface/hairline tokens (redefined under [data-theme="dark"]) */
   --surface: #FFFFFF;
-  --header-bg: rgba(251, 246, 239, 0.92);
-  --hairline-rgb: 36, 31, 26;
-  --shadow-rgb: 36, 31, 26;
+  --header-bg: rgba(251, 247, 240, 0.92);
+  --hairline-rgb: 34, 32, 28;
+  --shadow-rgb: 34, 32, 28;
 }
 
 [data-theme="dark"] {
-  --ivory: #15161D;
-  --ivory-soft: #1D1F29;
+  --ivory: #12141F;
+  --ivory-soft: #1B1E2C;
   --charcoal: #F3EFE8;
-  --navy: #0D0E14;
+  --navy: #0A0D26;
+  --accent: #5CC86A;
+  --accent-rgb: 92, 200, 106;
   --text-muted: #A6A099;
-  --surface: #1E212C;
-  --header-bg: rgba(21, 22, 29, 0.88);
+  --surface: #1C1F2D;
+  --header-bg: rgba(18, 20, 31, 0.88);
   --hairline-rgb: 255, 255, 255;
   --shadow-rgb: 0, 0, 0;
 }
@@ -64,7 +70,7 @@ a { color: inherit; text-decoration: none; }
    Each shows a label describing what should go here. */
 .placeholder-img {
   position: relative;
-  background: linear-gradient(135deg, #FFE3C2 0%, #FAC7D8 50%, #E7B8D8 100%);
+  background: linear-gradient(160deg, #FFE2C4 0%, #FFFFFF 50%, #D6EFD2 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,16 +108,16 @@ a { color: inherit; text-decoration: none; }
 .btn-primary {
   background: var(--gradient-accent);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(232, 52, 127, 0.3);
+  box-shadow: 0 6px 18px rgba(var(--saffron-shadow-rgb), 0.3);
 }
-.btn-primary:hover { box-shadow: 0 8px 22px rgba(232, 52, 127, 0.4); }
+.btn-primary:hover { box-shadow: 0 8px 22px rgba(var(--saffron-shadow-rgb), 0.4); }
 
 .btn-outline {
   background: transparent;
-  border-color: var(--magenta);
-  color: var(--magenta);
+  border-color: var(--accent);
+  color: var(--accent);
 }
-.btn-outline:hover { background: rgba(232, 52, 127, 0.08); }
+.btn-outline:hover { background: rgba(var(--accent-rgb), 0.08); }
 
 .btn-outline-light {
   background: transparent;
@@ -205,7 +211,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--charcoal);
   transition: color 0.15s ease;
 }
-.main-nav a:hover { color: var(--magenta); }
+.main-nav a:hover { color: var(--accent); }
 @media (min-width: 900px) {
   .main-nav ul { display: flex; }
 }
@@ -274,7 +280,7 @@ a { color: inherit; text-decoration: none; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(20, 15, 25, 0.72) 0%, rgba(20, 15, 25, 0.45) 45%, rgba(20, 15, 25, 0.1) 75%);
+  background: linear-gradient(90deg, rgba(10, 14, 40, 0.74) 0%, rgba(10, 14, 40, 0.45) 45%, rgba(10, 14, 40, 0.1) 75%);
 }
 .hero-content {
   position: relative;
@@ -288,7 +294,7 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--magenta);
+  color: var(--accent);
   margin: 0 0 14px;
 }
 .eyebrow-light { color: rgba(255,255,255,0.85); }
@@ -302,7 +308,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 20px;
 }
 .accent-text {
-  color: var(--orange);
+  color: var(--saffron);
   font-weight: 700;
   font-style: italic;
 }
@@ -574,7 +580,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* -------------------- Nav current-page state -------------------- */
-.main-nav a.is-current { color: var(--magenta); }
+.main-nav a.is-current { color: var(--accent); }
 
 /* =========================================================
    CONTACT PAGE
@@ -655,8 +661,8 @@ a { color: inherit; text-decoration: none; }
 .form-field select:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: var(--magenta);
-  box-shadow: 0 0 0 3px rgba(232, 52, 127, 0.12);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.12);
 }
 .contact-form .btn { align-self: flex-start; margin-top: 6px; }
 
@@ -681,7 +687,7 @@ a { color: inherit; text-decoration: none; }
   height: 44px;
   border-radius: 50%;
   background: var(--ivory-soft);
-  color: var(--magenta);
+  color: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -689,7 +695,7 @@ a { color: inherit; text-decoration: none; }
 .info-list strong { display: block; margin-bottom: 4px; font-size: 15px; }
 .info-list p { margin: 0; color: var(--text-muted); line-height: 1.5; }
 .info-list p a { color: var(--charcoal); font-weight: 600; }
-.info-list p a:hover { color: var(--magenta); }
+.info-list p a:hover { color: var(--accent); }
 
 .info-social strong { display: block; margin-bottom: 12px; font-size: 15px; }
 .contact-social a { color: var(--charcoal); border-color: rgba(var(--hairline-rgb), 0.15); }
@@ -727,8 +733,8 @@ a { color: inherit; text-decoration: none; }
   background: var(--gradient-accent);
 }
 .event-cat {
-  color: var(--magenta);
-  background: rgba(232, 52, 127, 0.1);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.1);
 }
 
 /* -------------------- Homepage: more upcoming events -------------------- */
@@ -750,7 +756,7 @@ a { color: inherit; text-decoration: none; }
 .upcoming-all {
   font-weight: 600;
   font-size: 15px;
-  color: var(--magenta);
+  color: var(--accent);
 }
 .upcoming-all:hover { text-decoration: underline; }
 
@@ -788,7 +794,7 @@ a { color: inherit; text-decoration: none; }
   padding: 6px 8px;
   border-radius: 12px;
   background: #fff;
-  color: var(--magenta);
+  color: var(--accent);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -840,7 +846,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: var(--radius-card);
   box-shadow: 0 10px 30px rgba(var(--shadow-rgb), 0.05);
 }
-.event-row-featured { box-shadow: 0 0 0 2px var(--magenta), 0 14px 36px rgba(232, 52, 127, 0.12); }
+.event-row-featured { box-shadow: 0 0 0 2px var(--accent), 0 14px 36px rgba(var(--accent-rgb), 0.12); }
 .event-row-date {
   display: flex;
   flex-direction: column;
@@ -856,7 +862,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--magenta);
+  color: var(--accent);
 }
 .er-day {
   font-family: var(--font-display);
@@ -1010,19 +1016,19 @@ a { color: inherit; text-decoration: none; }
   font-size: 22px;
 }
 .album-sub { font-size: 14px; color: var(--text-muted); }
-.album-card:focus-visible { outline: 3px solid var(--magenta); outline-offset: 6px; border-radius: 16px; }
+.album-card:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; border-radius: 16px; }
 
 /* Open album */
 .album-back {
   display: inline-block;
   font-weight: 600;
-  color: var(--magenta);
+  color: var(--accent);
   margin-bottom: 20px;
 }
 #album-view { scroll-margin-top: 100px; }
 .album-head { margin-bottom: 28px; }
 .album-head .section-title { margin: 0 0 6px; }
-.album-meta { margin: 0 0 8px; font-size: 14px; font-weight: 600; color: var(--magenta); }
+.album-meta { margin: 0 0 8px; font-size: 14px; font-weight: 600; color: var(--accent); }
 .album-desc { margin: 0; color: var(--text-muted); max-width: 560px; }
 
 .photo-grid {
@@ -1052,7 +1058,7 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.3s ease;
 }
 .photo-tile:hover img { transform: scale(1.04); }
-.photo-tile:focus-visible { outline: 3px solid var(--magenta); outline-offset: 3px; }
+.photo-tile:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
 /* Lightbox */
 .lightbox {
@@ -1165,7 +1171,7 @@ a { color: inherit; text-decoration: none; }
   object-position: center 25%;
   margin: 0 auto 18px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px var(--ivory), 0 0 0 6px rgba(232, 52, 127, 0.35);
+  box-shadow: 0 0 0 4px var(--ivory), 0 0 0 6px rgba(var(--saffron-shadow-rgb), 0.45);
 }
 .team-photo-top { object-position: center 10%; }
 .team-name {
@@ -1174,7 +1180,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 20px;
   margin: 0 0 2px;
 }
-.team-role { font-size: 13px; font-weight: 600; color: var(--magenta); margin: 0 0 6px; }
+.team-role { font-size: 13px; font-weight: 600; color: var(--accent); margin: 0 0 6px; }
 .team-tags { font-size: 12px; color: var(--text-muted); letter-spacing: 0.3px; margin: 0 0 12px; }
 .team-bio { font-size: 14px; color: var(--text-muted); margin: 0 0 10px; }
 .team-more { font-size: 14px; text-align: left; }
@@ -1182,7 +1188,7 @@ a { color: inherit; text-decoration: none; }
   cursor: pointer;
   text-align: center;
   font-weight: 600;
-  color: var(--magenta);
+  color: var(--accent);
   list-style: none;
 }
 .team-more summary::-webkit-details-marker { display: none; }
@@ -1220,4 +1226,99 @@ a { color: inherit; text-decoration: none; }
   max-width: 100%;
   max-height: 72px;
   object-fit: contain;
+}
+
+/* =========================================================
+   TRICOLOUR THEME — emblem, stripes and chakra watermark
+   ========================================================= */
+
+/* Thin saffron/white/green stripe across the top of the header and footer */
+.site-header::before,
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--tricolour);
+}
+.site-footer { position: relative; }
+
+/* Emblem in header/footer */
+.logo-emblem {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 2px 6px rgba(var(--shadow-rgb), 0.15));
+}
+.logo-text strong {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+}
+.main-nav a { white-space: nowrap; }
+.site-header .logo-text strong { color: var(--navy); }
+[data-theme="dark"] .site-header .logo-text strong { color: var(--charcoal); }
+
+/* Navy page banners get a faint Ashoka Chakra watermark */
+.page-hero { position: relative; overflow: hidden; }
+.page-hero > * { position: relative; z-index: 1; }
+.page-hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -90px;
+  width: 380px;
+  height: 380px;
+  transform: translateY(-50%);
+  background: url("assets/chakra-watermark.svg") center / contain no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .page-hero::after { right: -140px; width: 300px; height: 300px; }
+}
+.page-hero .eyebrow { color: var(--saffron); }
+
+/* -------------------- About: Our emblem -------------------- */
+.about-emblem { padding: 40px 0; }
+.emblem-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (min-width: 760px) {
+  .emblem-grid { grid-template-columns: 260px 1fr; gap: 56px; }
+}
+.emblem-figure {
+  width: 220px;
+  margin: 0 auto;
+  filter: drop-shadow(0 18px 36px rgba(var(--shadow-rgb), 0.18));
+}
+.emblem-swatches {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 20px;
+}
+.emblem-swatches li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-muted); }
+.emblem-swatches strong { color: var(--charcoal); }
+.swatch {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(var(--hairline-rgb), 0.15);
+}
+.emblem-lead { color: var(--text-muted); margin: 0; max-width: 520px; }
+
+/* Header tagline: one line, and only where there's room beside the nav */
+.logo-tagline { white-space: nowrap; }
+@media (min-width: 900px) and (max-width: 1199px) {
+  .logo-tagline { display: none; }
 }
