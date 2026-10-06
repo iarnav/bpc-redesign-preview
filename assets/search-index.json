@@ -503,8 +503,15 @@
 {
 "title": "Cookies and analytics",
 "page": "Privacy",
+"url": "privacy.html#cookies",
+"snippet": "A cookie is a small file placed on your device. With your permission, we use Google Analytics cookies to see which pages are being used. This helps us understand how the site is us",
+"level": 3
+},
+{
+"title": "Contact form",
+"page": "Privacy",
 "url": "privacy.html#main",
-"snippet": "A cookie is a small file placed on your device. We use traffic log cookies, through Google Analytics, to see which pages are being used. This helps us understand how the site is us",
+"snippet": "When you send us a message through our contact form, your name, email address, phone number (if given) and message are passed to our form provider, Web3Forms, which emails them to ",
 "level": 3
 },
 {

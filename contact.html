@@ -5,14 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact Us — BPC Indian Community</title>
 
-<!-- Google tag (gtag.js) — GA4 property: BPC Indian Community -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NKQS6ZV1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W0NKQS6ZV1');
-</script>
+<!-- Google Analytics (GA4) is loaded by assets/site.js only after the visitor accepts cookies. -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,31 +93,36 @@
             Fill out the form below and a member of our team will get back to
             you as soon as possible.
           </p>
-          <form class="contact-form" action="#" method="post">
+          <!-- Messages are delivered by Web3Forms (web3forms.com) to the email address the access key was created for. -->
+          <form class="contact-form" action="https://api.web3forms.com/submit" method="post" data-contact-form>
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+            <input type="hidden" name="subject" value="New message from the BPC website">
+            <input type="hidden" name="from_name" value="BPC website">
+            <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-row">
               <div class="form-field">
                 <label for="name">Full name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
+                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
               </div>
               <div class="form-field">
                 <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-field">
                 <label for="phone">Phone number <span class="optional">(optional)</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="07xxx xxxxxx">
+                <input type="tel" id="phone" name="phone" placeholder="07xxx xxxxxx" autocomplete="tel">
               </div>
               <div class="form-field">
                 <label for="subject">Subject</label>
-                <select id="subject" name="subject">
+                <select id="subject" name="topic">
                   <option value="">Select a topic</option>
-                  <option value="events">Events &amp; Festivals</option>
-                  <option value="membership">Membership</option>
-                  <option value="volunteering">Volunteering</option>
-                  <option value="donations">Donations &amp; Sponsorship</option>
-                  <option value="other">Other</option>
+                  <option>Events &amp; Festivals</option>
+                  <option>Membership</option>
+                  <option>Volunteering</option>
+                  <option>Donations &amp; Sponsorship</option>
+                  <option>Other</option>
                 </select>
               </div>
             </div>
@@ -133,6 +131,7 @@
               <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-lg">Send Message →</button>
+            <p class="form-status" role="status" aria-live="polite" hidden></p>
           </form>
         </div>
 
@@ -229,7 +228,7 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 BPC Indian Community. All rights reserved. · <a href="privacy.html">Privacy policy</a></p>
+      <p>© 2026 BPC Indian Community. All rights reserved. · <a href="privacy.html">Privacy policy</a> · <button type="button" class="link-button" data-cookie-settings>Cookie settings</button></p>
     </div>
   </footer>
 

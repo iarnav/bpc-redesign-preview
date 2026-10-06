@@ -665,6 +665,18 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.12);
 }
 .contact-form .btn { align-self: flex-start; margin-top: 6px; }
+.contact-form .btn:disabled { opacity: 0.7; cursor: progress; transform: none; }
+.form-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-status {
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.form-status.is-success { background: rgba(var(--accent-rgb), 0.1); color: var(--accent); }
+.form-status.is-error { background: rgba(200, 40, 40, 0.1); color: #B42318; }
+[data-theme="dark"] .form-status.is-error { color: #FF8A80; }
 
 /* Info sidebar */
 .contact-info { padding-top: 4px; }
@@ -1762,6 +1774,55 @@ main { scroll-margin-top: 90px; }
 }
 [data-theme="dark"] .toast { background: #2A2E45; }
 .toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+
+/* -------------------- Cookie banner -------------------- */
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 240;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--charcoal);
+  border: 1px solid rgba(var(--hairline-rgb), 0.1);
+  box-shadow: 0 18px 50px rgba(var(--shadow-rgb), 0.25);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  transform: translateY(16px);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.cookie-banner.is-visible { opacity: 1; transform: none; }
+.cookie-banner p { margin: 0; flex: 1 1 320px; }
+.cookie-banner a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.cookie-actions { display: flex; gap: 10px; flex: 0 0 auto; }
+.cookie-actions .btn { padding: 10px 22px; font-size: 14px; }
+@media (max-width: 480px) {
+  .cookie-actions { flex: 1 1 100%; }
+  .cookie-actions .btn { flex: 1; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cookie-banner { transition: none; }
+}
+.link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: rgba(255,255,255,0.75);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.link-button:hover { color: #fff; }
 .to-top {
   position: fixed;
   right: 20px;
@@ -1892,3 +1953,5 @@ main { scroll-margin-top: 90px; }
 
 /* The header now carries search; the place tagline lives in the hero and footer instead */
 .site-header .logo-tagline { display: none !important; }
+.link-button-inline { color: var(--accent); }
+.link-button-inline:hover { color: var(--accent); }
