@@ -1346,6 +1346,21 @@ a { color: inherit; text-decoration: none; }
   .header-inner { gap: 16px; }
 }
 
+/* Home link: house icon in the desktop nav, icon + "Home" in the mobile menu */
+.main-nav a.nav-home { display: inline-flex; align-items: center; gap: 10px; }
+.main-nav a.nav-home svg { flex: none; }
+@media (min-width: 900px) {
+  .main-nav a.nav-home { padding: 6px; margin: -6px; border-radius: 50%; }
+  .nav-home-label {
+    position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+}
+@media (max-width: 899px) {
+  .main-nav.is-open { max-height: 420px; }
+  .main-nav a.nav-home { display: flex; }
+}
+
 /* =========================================================
    LIVE-SITE CONTENT: donate, privacy, timeline, highlights
    ========================================================= */
