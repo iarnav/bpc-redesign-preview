@@ -1,6 +1,6 @@
 // BPC service worker — makes the site installable and keeps visited pages available offline.
 // Bump CACHE_VERSION whenever the core files below change so phones pick up the new version.
-const CACHE_VERSION = 'bpc-v9';
+const CACHE_VERSION = 'bpc-v10';
 const CORE = [
   './', 'index.html', 'events.html', 'gallery.html', 'about.html', 'contact.html', 'donate.html', 'privacy.html',
   'style.css', 'assets/site.js', 'assets/search-index.json', 'manifest.webmanifest', 'assets/icons/icon-192.png'
@@ -24,12 +24,14 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
 
   // Pages, CSS and JS: network first so a page never pairs with an outdated stylesheet;
-  // fall back to cache when offline.
-  const isCode = /\.(css|js)$/.test(new URL(req.url).pathname);
+  // fall back to cache when offline. 'no-cache' makes the browser check with the server
+  // instead of reusing its own 10-minute HTTP cache, so updates show on the next visit.
+  const isCode = /\.(css|js|json)$/.test(new URL(req.url).pathname);
   if (req.mode === 'navigate' || isCode) {
     event.respondWith(
-      fetch(req)
+      fetch(req.url, { cache: 'no-cache', credentials: 'same-origin' })
         .then((res) => {
+          if (res.redirected) return fetch(req); // Safari rejects redirected responses for page loads
           const copy = res.clone();
           caches.open(CACHE_VERSION).then((cache) => cache.put(req, copy));
           return res;
