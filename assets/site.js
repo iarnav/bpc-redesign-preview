@@ -269,6 +269,45 @@
   }));
   window.addEventListener('appinstalled', () => toast('BPC app installed — find it on your home screen.'));
 
+  /* ---------- Image viewer for [data-lightbox] links ----------
+     Opens the image over the page instead of navigating to the bare file, which in the
+     installed app leaves no way back. Closes with ×, Esc, a tap outside, or the phone's back gesture. */
+  let viewer = null;
+  function closeViewer() {
+    if (!viewer) return;
+    const { el, opener } = viewer;
+    viewer = null;
+    el.remove();
+    document.body.style.overflow = '';
+    opener.focus();
+  }
+  function openViewer(link) {
+    const el = document.createElement('div');
+    el.className = 'lightbox';
+    el.setAttribute('role', 'dialog');
+    el.setAttribute('aria-modal', 'true');
+    el.setAttribute('aria-label', link.getAttribute('aria-label') || 'Image viewer');
+    const img = link.querySelector('img');
+    el.innerHTML = '<button type="button" class="lb-btn lb-close" aria-label="Close">×</button>' +
+      '<figure class="lb-figure"><img alt=""><figcaption>Tap outside the image or × to close</figcaption></figure>';
+    el.querySelector('img').src = link.href;
+    el.querySelector('img').alt = img ? img.alt : '';
+    el.addEventListener('click', e => {
+      if (e.target === el || e.target.closest('.lb-close')) history.back();
+    });
+    document.body.appendChild(el);
+    document.body.style.overflow = 'hidden';
+    viewer = { el, opener: link };
+    history.pushState({ bpcViewer: true }, '');
+    el.querySelector('.lb-close').focus();
+  }
+  document.querySelectorAll('a[data-lightbox]').forEach(link => link.addEventListener('click', e => {
+    e.preventDefault();
+    openViewer(link);
+  }));
+  window.addEventListener('popstate', closeViewer);
+  document.addEventListener('keydown', e => { if (viewer && e.key === 'Escape') history.back(); });
+
   /* ---------- Contact form (Web3Forms) ---------- */
   const CONTACT_EMAIL = 'contact@bpcindiancommunity.co.uk';
   document.querySelectorAll('[data-contact-form]').forEach(form => {
